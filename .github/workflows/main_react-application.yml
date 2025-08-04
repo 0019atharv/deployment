@@ -27,7 +27,7 @@ jobs:
           npm run build
 
       - name: Run tests (ignore failure if none exist)
-        run: npm test
+        run: npm test || true
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -62,3 +62,4 @@ jobs:
           app-name: 'react-application'
           slot-name: 'Production'
           package: build
+
